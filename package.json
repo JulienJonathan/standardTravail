@@ -1,0 +1,22 @@
+{
+  "name": "standardtravail",
+  "version": "1.0.0",
+  "description": "**Le but** :\r Développer un projet standard pour les restaurants de France et de navarre.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienJonathan/standardTravail.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulienJonathan/standardTravail/issues"
+  },
+  "homepage": "https://github.com/JulienJonathan/standardTravail#readme",
+  "devDependencies": {
+    "express": "^4.16.3"
+  }
+}
