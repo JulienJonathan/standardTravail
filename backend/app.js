@@ -1,43 +1,55 @@
 //Import env variables
-require('dotenv').config()
+require('dotenv').config();
 
 //Import libraries
-let express = require('express')
-let bodyParser = require('body-parser')
-let session = require('express-session')
+const express = require('express');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+
+
+//Routes
+
+const routes = require('./routes/index');
+
 
 //Initialize
-let app = express()
+const app = express();
 
 //Settings
 
 
 //Starting  parameters
-console.error('Starting app (build,version):',process.env.BUILD_VERSION,process.env.VERSION)
-console.error('Connecting to PostgreSQL using :',process.env.DATABASE_URL)
+//console.error('Starting app (build,version):',process.env.BUILD_VERSION,process.env.VERSION);
+//console.error('Connecting to PostgreSQL using :',process.env.DATABASE_URL);
 
 //Moteur de template
 app.set('view engine','ejs');
 
 
 //Middlewares
-app.use('/assets',express.static('public'));
-
+if(process.env.ENV === 'development'){
+//  app.use(logger('dev'));
+  console.log('Log as developper')
+}
+//app.use('/assets',express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(session({
-    secret: process.env.SECRET_SESSION,
+    secret: 'azzz',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
 }));
 
 
-//Routes
-app.get('/',(request,response)=>{
-      response.send('Hello World!')
-   });
+app.use('/',routes)
 
-//Listen
+//catch 404 error
 
-app.listen(8080);
+app.use((request, response,next)=>{
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err)
+});
+
+module.exports = app;
