@@ -15,8 +15,8 @@ router.use(function timeLog(req, res, next) {
 
 // define the home page route
 
-router.get('/',(request,response,next)=>{
-  response.send('Hello world')
+router.get('/',(request,response)=>{
+  response.render('pages/index')
 })
 
 module.exports = router

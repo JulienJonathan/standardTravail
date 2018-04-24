@@ -1,5 +1,5 @@
 //Import env variables
-require('dotenv').config();
+const env = require('../env')
 
 //Import libraries
 const express = require('express');
@@ -27,11 +27,11 @@ app.set('view engine','ejs');
 
 
 //Middlewares
-if(process.env.ENV === 'development'){
+if(env.ENV === 'development'){
 //  app.use(logger('dev'));
   console.log('Log as developper')
 }
-//app.use('/assets',express.static('public'));
+app.use('/assets',express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(session({
