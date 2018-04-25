@@ -6,17 +6,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 
-
 //Routes
 
 const routes = require('./routes/index');
-
 
 //Initialize
 const app = express();
 
 //Settings
-
 
 //Starting  parameters
 //console.error('Starting app (build,version):',process.env.BUILD_VERSION,process.env.VERSION);
@@ -24,7 +21,6 @@ const app = express();
 
 //Moteur de template
 app.set('view engine','ejs');
-
 
 //Middlewares
 if(env.ENV === 'development'){
@@ -45,7 +41,7 @@ app.use(session({
 app.use('/',routes)
 
 //catch 404 error
-
+/*
 app.use(function(req, res, next){
   res.status(404);
 
@@ -65,5 +61,5 @@ app.use(function(req, res, next){
   res.type('txt').send('Not found');
 });
 
-
+*/
 module.exports = app;
