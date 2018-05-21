@@ -1,109 +1,195 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>
-      <% include ../partials/head %>
-  </head>
-  <body>
-    <% include ../partials/header %>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="">
 
-    <div id="index-banner" class="parallax-container">
-   <div class="section no-pad-bot">
-     <div class="container">
-       <br><br>
-       <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
-       <div class="row center">
-         <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-       </div>
-       <div class="row center">
-         <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-       </div>
-       <br><br>
+  <title>Contrôle des investissements</title>
 
-     </div>
-   </div>
-   <div class="parallax"><img src="assets/images/lake.jpg" alt="Unsplashed background img 1"></div>
- </div>
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/assets/stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="#">Features</a>
+    <a class="p-2 text-dark" href="#">Enterprise</a>
+    <a class="p-2 text-dark" href="#">Support</a>
+    <a class="p-2 text-dark" href="#">Pricing</a>
+  </nav>
+  <a class="btn btn-outline-primary" href="#">Sign up</a>
+</div>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Dashboard</h1>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group mr-2">
+      <button class="btn btn-sm btn-outline-secondary">Share</button>
+      <button class="btn btn-sm btn-outline-secondary">Export</button>
+    </div>
+    <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+      <span data-feather="calendar"></span>
+      This week
+    </button>
+  </div>
+</div>
+<canvas id="myChart" width="900" height="380"></canvas><!--class="my-4 w-100"-->
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Pricing</h1>
+  <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+</div>
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 box-shadow">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Free</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>10 users included</li>
+          <li>2 GB of storage</li>
+          <li>Email support</li>
+          <li>Help center access</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+      </div>
+    </div>
+    <div class="card mb-4 box-shadow">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Pro</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>20 users included</li>
+          <li>10 GB of storage</li>
+          <li>Priority email support</li>
+          <li>Help center access</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+      </div>
+    </div>
+    <div class="card mb-4 box-shadow">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Enterprise</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>30 users included</li>
+          <li>15 GB of storage</li>
+          <li>Phone and email support</li>
+          <li>Help center access</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+        <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Cool stuff</a></li>
+          <li><a class="text-muted" href="#">Random feature</a></li>
+          <li><a class="text-muted" href="#">Team feature</a></li>
+          <li><a class="text-muted" href="#">Stuff for developers</a></li>
+          <li><a class="text-muted" href="#">Another one</a></li>
+          <li><a class="text-muted" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Resource</a></li>
+          <li><a class="text-muted" href="#">Resource name</a></li>
+          <li><a class="text-muted" href="#">Another resource</a></li>
+          <li><a class="text-muted" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Team</a></li>
+          <li><a class="text-muted" href="#">Locations</a></li>
+          <li><a class="text-muted" href="#">Privacy</a></li>
+          <li><a class="text-muted" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
 
 
- <div class="container">
-   <div class="section">
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/assets/javascripts/jquery.slim.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/javascripts/jquery.slim.js"><\/script>')</script>
+<script src="/assets/javascripts/popper.js"></script>
+<script src="/assets/javascripts/bootstrap.js"></script>
+<script src="/assets/javascripts/holder.js"></script>
 
-     <!--   Icon Section   -->
-     <div class="row">
-       <div class="col s12 m4">
-         <div class="icon-block">
-           <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-           <h5 class="center">Speeds up development</h5>
-
-           <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-         </div>
-       </div>
-
-       <div class="col s12 m4">
-         <div class="icon-block">
-           <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-           <h5 class="center">User Experience Focused</h5>
-
-           <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-         </div>
-       </div>
-
-       <div class="col s12 m4">
-         <div class="icon-block">
-           <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-           <h5 class="center">Easy to work with</h5>
-
-           <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-         </div>
-       </div>
-     </div>
-
-   </div>
- </div>
+<!-- Icons -->
+<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+<script>
+    feather.replace()
+</script>
 
 
- <div class="parallax-container valign-wrapper">
-   <div class="section no-pad-bot">
-     <div class="container">
-       <div class="row center">
-         <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-       </div>
-     </div>
-   </div>
-   <div class="parallax"><img src="assets/images/lake.jpg" alt="Unsplashed background img 2"></div>
- </div>
+<script>
+    Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+    });
+</script>
+<!--<script src="/assets/javascripts/chart.js"></script>-->
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.bundle.min.js"> </script>
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+type: 'line',
+data: {
+labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+datasets: [{
+data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+lineTension: 0,
+backgroundColor: 'transparent',
+borderColor: '#007bff',
+borderWidth: 4,
+pointBackgroundColor: '#007bff'
+}]
+},
+options: {
+scales: {
+yAxes: [{
+ticks: {
+beginAtZero: false
+}
+}]
+},
+legend: {
+display: false,
+}
+}
+});
+</script>
 
- <div class="container">
-   <div class="section">
-
-     <div class="row">
-       <div class="col s12 center">
-         <h3><i class="mdi-content-send brown-text"></i></h3>
-         <h4>Contact Us</h4>
-         <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-       </div>
-     </div>
-
-   </div>
- </div>
-
-
- <div class="parallax-container valign-wrapper">
-   <div class="section no-pad-bot">
-     <div class="container">
-       <div class="row center">
-         <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-       </div>
-     </div>
-   </div>
-   <div class="parallax"><img src="assets/images/lake.jpg" alt="Unsplashed background img 3"></div>
- </div>
-
-
-    <% include ../partials/footer %>
-
-
-    <% include ../partials/script %>
-  </body>
+</body>
 </html>
